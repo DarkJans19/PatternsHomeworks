@@ -9,9 +9,13 @@ package com.mycompany.principiol;
  *
  * @author Estudiantes
  */
-public class PrincipioL {
+public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        Figura figura1 = new Circulo(1);
+        Figura figura2 = new Rectangulo(1,1);
+        
+        System.out.println("Area de la figura 1: " + figura1.calcularArea());
+        System.out.println("Area de la figura 2: " + figura2.calcularArea());
     }
 }
