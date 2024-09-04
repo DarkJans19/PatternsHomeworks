@@ -1,0 +1,5 @@
+com\mycompany\principios\Libro.class
+com\mycompany\principios\LibroRepository.class
+com\mycompany\principios\MalLibro.class
+com\mycompany\principios\BibliotecaApp.class
+com\mycompany\principios\PDFGenerator.class
