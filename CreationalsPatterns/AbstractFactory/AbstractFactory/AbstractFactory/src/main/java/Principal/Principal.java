@@ -1,10 +1,11 @@
 package Principal;
 
 import javax.swing.JOptionPane;
-import Fabricas.FabricaDeTaxis;
+
+import Fabricas.FabricaDeBuses;
 import Fabricas.FabricaDeBusetas;
+import Fabricas.FabricaDeTaxis;
 import Fabricas.FabricaDeVehiculos;
-import fabricas.FabricaDeBuses;
 
 /**
  * clase principal del aplicativo donde se establecen las instancias 
@@ -36,7 +37,7 @@ cad+="Ingrese la opción correspondiente para obtener el codigo del servicio\n";
      break;
     case 3:FabricaDeVehiculos.crearFabricaDeVehiculo(busetas);
      break;
-    default:JOptionPane.showMessageDialog(null,"No es un valor de consultavalido");
+    default:JOptionPane.showMessageDialog(null,"No es un valor de consulta valido");
       break;
    }
   } catch (Exception e) {
@@ -46,7 +47,7 @@ cad+="Ingrese la opción correspondiente para obtener el codigo del servicio\n";
  
  } while (salida.toUpperCase().equals("S"));
      } catch (Exception e) {
-  JOptionPane.showMessageDialog(null,"Bye!!!");
+  JOptionPane.showMessageDialog(null,"Nos vemoos!");
   }
  }
 }

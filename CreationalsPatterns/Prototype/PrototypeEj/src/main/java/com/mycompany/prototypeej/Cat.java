@@ -9,8 +9,6 @@ package com.mycompany.prototypeej;
  * @author Estudiantes
  */
 
-import java.util.Objects;
-
 public class Cat extends Animal{
     public boolean flexibility;
     public Cat(){
