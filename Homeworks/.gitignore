@@ -1,0 +1,5 @@
+# Ignorar carpetas target
+**/target/
+
+# Ignorar archivos .class
+*.class
