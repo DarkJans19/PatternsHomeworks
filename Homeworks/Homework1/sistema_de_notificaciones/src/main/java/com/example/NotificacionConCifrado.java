@@ -12,8 +12,8 @@ public class NotificacionConCifrado extends NotificacionDecorador {
         notificacionDecorada.enviar(mensajeCifrado);
     }
 
+    //Este metodo simula el cifrado del mensaje pero en este caso solo esta revertiendo la cadena
     private String cifrarMensaje(String mensaje) {
-        // Simula el cifrado del mensaje (aquí solo se invierte el mensaje para simplificar)
         return new StringBuilder(mensaje).reverse().toString();
     }
 }
