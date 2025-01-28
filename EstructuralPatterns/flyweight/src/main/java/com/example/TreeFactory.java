@@ -6,11 +6,11 @@ import java.util.Map;
 public class TreeFactory {
     private static Map<String, TreeType> treeTypes = new HashMap<>();
 
-    public static TreeType getTreeType(String name, String color, String texture){
+    public static TreeType getTreeType(String name, String color, String texture) {
         TreeType type = treeTypes.get(name);
-        if(type == null){
-            type = new ConcreteTreeFile(name, color, texture);
-            treeTypes.put(texture, type);
+        if (type == null) {
+            type = new ConcreteTreeType(name, color, texture);
+            treeTypes.put(name, type); // Corregido: se usa 'name' como clave
         }
         return type;
     }
