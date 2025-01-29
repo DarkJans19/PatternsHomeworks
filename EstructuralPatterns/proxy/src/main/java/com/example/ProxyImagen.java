@@ -1,22 +1,24 @@
 package com.example;
 
-public class ProxyImagen implements	Imagen{
-    private String nombreArchivo;
+class ProxyImagen implements Imagen {
+    private String nombreArchivo; // Campo privado
     private ImagenReal imagenReal;
 
-    // Constructor
-    public ProxyImagen(String nombreArchivo){
+    public ProxyImagen(String nombreArchivo) {
         this.nombreArchivo = nombreArchivo;
+    }
+
+    // Método getter para acceder al nombreArchivo
+    public String getNombreArchivo() {
+        return nombreArchivo;
     }
 
     // Implementamos el metodo mostrar
     @Override
-    public void mostrar(){
-        if (imagenReal == null){
-            // Aqui solo se crea la imagen cuando es necesario
+    public void mostrar() {
+        if (imagenReal == null) {
             imagenReal = new ImagenReal(nombreArchivo);
         }
-        // Delega la llamada a la imagen real
         imagenReal.mostrar();
     }
 }
