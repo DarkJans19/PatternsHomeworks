@@ -16,9 +16,12 @@ public class Main {
         pagos.add(new PayPalFactory().crearPago());
         pagos.add(new CriptoFactory().crearPago());
 
+        // Crear el servicio externo
+        PagoExterno pagoMercadoPago = new PagoMercadoPago();
+
         // Usando Adapter para el servicio externo
-        ServicioPagoExterno servicioExterno = new ServicioPagoExterno();
-        pagos.add(new PagoAdapter(servicioExterno, "USD"));
+        Pago pagoAdaptado = new PagoAdapter(pagoMercadoPago);
+        pagos.add(pagoAdaptado);
 
         // Procesar todos los pagos
         for (Pago pago : pagos) {
